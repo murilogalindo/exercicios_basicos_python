@@ -1,0 +1,447 @@
+#001 - calcular soma
+n1 = int(input('Numero 1: '))
+n2 = int(input('Numero 2: '))
+res = n1 + n2
+print ('A soma entre {} + {} = {} '.format(n1, n2, res))
+
+#002 - mostrar formas de valores
+valor = input('Entre com qualquer valor: ')
+print (type(valor))
+print (valor.isdecimal())
+print (valor.isdigit())
+print (valor.islower())
+print (valor.isnumeric())
+print (valor.isupper())
+print (valor.isspace())
+
+#003 - mostar sucessessor e antecessor de um número
+numero = int(input('Digite um mumero: '))
+suc = numero + 1
+res = numero - 1
+print ('O número digitato foi ', numero)
+print ('Seu Sucessor é: ', suc)
+print ('Seu Antecessor é: ', res)
+
+#004 - raiz quadrada de um número
+numero = int(input('Digite um mumero: '))
+dobro = numero + numero
+triplo = numero * 3
+raiz = float(numero) ** 0.5
+
+print ('Dobro de {} = {}'.format(numero, dobro))
+print ('Triplo de {} = {}'.format(numero, triplo))
+print ('Raiz de {} = {}'.format(numero, raiz))
+
+#005 - clássico da média
+nota1 = float(input('Entre com a nota 1: '))
+nota2 = float(input('Entre com a nota 2: '))
+media = (nota1 + nota2) / 2
+print ('A sua média é : ', media)
+
+#006 - mostrar converter metros em centimetros e milimetros
+valor_metro = int(input('Entre com o tamanho em metro '))
+metro = 1000
+centimetro = valor_metro / 0.01
+milimetro = valor_metro / 0.001
+
+print ('Voce digitou em metros: ', valor_metro)
+print ('Seu valor em centimetro é: ', centimetro)
+print ('Seu valor em milimero é: ', milimetro)
+
+#007 - tabuada
+numero = int(input('Entre com o númerio '))
+
+for n in range(1, 10):
+    print ('{} * {} = {} '.format(numero, (n + 1), numero * (n + 1)))
+
+#008 - real para dolar
+real = float(input("Digite sua quantia em real: "))
+dolarAtual = 5.15
+valor = real / dolarAtual
+print ('Com {} você pode comprar {} de Dolar. '.format(real, round(valor, 2)))
+
+#009 - quantos baldes para pintar a parede
+alura = int(input('Entre com a altura da parede: '))
+largura = int(input('Entre com a altura da parede: '))
+area = alura * largura
+litro = 2
+tinta = area / litro
+print ('Altura da parede = {}'.format(alura))
+print ('Largura da parede = {} '.format(largura))
+print ('Area da parede = {} '.format(area))
+print ('Voce precisa de {} litros de tinta para pinta toda parede :)'.format(tinta))
+
+#010 - desconto de produto
+preco_atual = float(input('Entre com o preço atual: '))
+desconto = (preco_atual * 0.05)
+preco_final = preco_atual - desconto
+print ("Valor atual do produto {}: ".format(preco_atual))
+print ("Valor com 5% de desconto {}: ".format(preco_final))
+
+#011 - calcular reajuste de salário
+salario_atual = float(input('Entre com salário atual: '))
+aumento = (salario_atual * 0.15)
+salario_ajustado = salario_atual + aumento
+print ("Valor atual do salario {}: ".format(salario_atual))
+print ("Valor ajustado com 15% de aumento {} ".format(salario_ajustado))
+
+#012 - Ler um número real e mostre a parcela inteira
+import math
+
+numero_real = float(input('Entre com o numero: '))
+inteiro = math.trunc(numero_real)
+print ('A porcao inteira: {} '.format(inteiro))
+
+#013 - hipotenusa
+import math
+
+cp = int(input('Entre com o cateto oposto: '))
+cd = int(input('Entre com o cateto oposto: '))
+hipotenusa = math.sqrt((cp * cp) + (cd * cd))
+
+print ('Hipotenusa {} '.format(hipotenusa))
+
+#014 - seno, conseno e tangente
+import math
+
+ang = int(input('Entre com o angulo'))
+angulo_1 = math.radians(ang)
+seno = math.sin(angulo_1)
+cose = math.cos(angulo_1)
+tang = math.tan(angulo_1)
+print ('Para o angulo {:2f}  o Seno {:2f} o Conseno {:2f} e a Tangente {:2f} '.format(ang, seno, cose, tang))
+
+
+#015 - sorteando alunos para limpar o quadro
+import random
+
+aluno1 = input('Entre como nome de aluno 1: ')
+aluno2 = input('Entre como nome de aluno 2: ')
+aluno3 = input('Entre como nome de aluno 3: ')
+aluno4 = input('Entre como nome de aluno 4: ')
+
+lista = [aluno1, aluno2, aluno3, aluno4]
+
+sorteio = random.choice(lista)
+print ('Sorteio: {}'.format(sorteio))
+
+#016 - ordem dos alunos sorteados
+import random
+
+aluno1 = input('Entre como nome de aluno 1: ')
+aluno2 = input('Entre como nome de aluno 2: ')
+aluno3 = input('Entre como nome de aluno 3: ')
+aluno4 = input('Entre como nome de aluno 4: ')
+
+lista = [aluno1, aluno2, aluno3, aluno4]
+
+sorteio = random.sample(lista, 4)
+print ('Sorteio: {}'.format(sorteio))
+
+#017 - tocando música
+import pygame
+
+# Inicializando o mixer PyGame
+pygame.mixer.init()
+
+# Iniciando o Pygame
+pygame.init()
+
+pygame.mixer.music.load('musica.mp3')
+pygame.mixer.music.play()
+pygame.event.wait()
+
+#0018 - calculo  media
+nota1 = float(input('Entre com a nota 1 : '))
+nota2 = float(input('Entre com a nota 2 : '))
+
+media = (nota1 + nota2) / 2
+
+if media >= 7:
+
+    print ('Sua nota foi {} Você foi aprovado!'.format(media))
+else:
+    print ('Sua nota foi menor que {}. Você foi reprovado'.format(media))
+
+#019 - advinhar numero
+#joguinho adivinha numero
+import random
+
+sorteio = random.randint(0, 10)
+print ('Numero ', sorteio)
+print ('Eu estou pensando no número ...')
+
+adivinharNumero = int(input('\nAdivinhe o número número: '))
+
+if adivinharNumero == sorteio:
+    print ('Você me pegou, seu maldito!')
+    print ('Eu pensei em {} mesmo '.format(sorteio))
+else:
+    print ('Você errou, seu idiota BURRO')
+    print ('Eu pensei em {} '.format(sorteio))
+
+
+#020 - multa por excesso de velocidade
+
+valociade = int(input('Entre com a velocidade do carro: '))
+# velocidade maxima 80km
+vm = 80
+if valociade > vm:
+    resto = (valociade - vm)
+    valor_multa = resto * 7
+    print ('Você foi multado!! Evai pagar um multa no total de {} '.format(valor_multa))
+else:
+    print ('Você está dentro do limite de velociade. Pode passar!')
+
+#021 - numero impar e par
+numero = int(input('Entre com um número: '))
+if (numero % 2 == 0):
+    print ('Numero par')
+else:
+    print ('Numero impar')
+
+#022 - calcular valor da passagem por quilometragem
+
+qm = int(input('Entre com a distancica percorrida da viage em Km2: '))
+vDuzentos = 0.50
+vMarioDuzenos = 0.45
+
+if (qm >= 1 ) & (qm <= 200):
+    print ('\nO valor da passagem é: R$ {}'.format(qm * vDuzentos))
+else:
+     print ('\nO valor da passagem é: R$ {:.1f}  '.format(qm * vMarioDuzenos))
+
+#023 - calcular se o ano é bisexto
+ano = int(input('Entre com  ano: '))
+if (ano % 4 == 0) & (ano % 100 != 0) | (ano % 400 == 0):
+    print ('O ano {} é Bisexto!'.format(ano))
+else:
+    print ('O ano {} não é Bisexto!'.format(ano))
+
+
+#024 - calcular aumento de salário de cdfuncionário
+salario = float(input('Entre com o salário: '))
+if (salario >= 1250):
+    print ('Você vai ganhar um aumeto de {} % e seu salário será R$ {}'.format(10, (salario * 10 / 100) + salario))
+else:
+    print ('Você vai ganhar um aumeto de {} % e seu salário será R$ {}'.format(15, (salario * 15 / 100) + salario))
+
+#025 - mostrar maior valor
+n1 = int(input('Entre com o numero 1: '))
+n2 = int(input('Entre com o numero 2: '))
+n3 = int(input('Entre com o numero 3: '))
+
+if (n1 > n2) & (n1 > n3):
+    maior = n1
+elif (n2 > n1) & (n2 > n3):
+    maior = n2
+elif (n3 > n1) & (n3 > n2):
+    maior = n3
+    print ('O maior de {} - {} - {} é o numero {}'.format(n1,n2,n3, maior))
+else:
+    print ('Todos os valores sao iguais')
+
+#026 - mostrar maior valor
+r1 = int(input('Entre com a reta 1: '))
+r2 = int(input('Entre com a reta 2: '))
+r3 = int(input('Entre com a reta 3: '))
+
+if (r1 < (r2 + r3)) & (r2 < (r1 + r3)) & (r3 < (r2 + r1)):
+    print ('É um triangulo')
+else:
+    print ('Não é um triangulo!')
+
+#027 - conversao de número
+numero = int(input('Entre com um número: '))
+print ('''Entre com a base de conversão:
+                    '[ 1 ] Binário'
+                    '[ 2 ] Octal'
+                    '[ 3 ] Hexadecimal :  ''')
+opcao = int(input('Sua opção:' ))
+
+if opcao == 1:
+    print ('O {} Inteiro é igual a {} em binário'.format(numero, bin(numero)[2:].zfill(8)))
+elif opcao == 2:
+    print ('O {} Inteiro é igual a {} em octal'.format(numero, oct(numero)[2:]))
+elif opcao == 3:
+    print ('O {} Inteiro é igual a {} em Hexadecimal'.format(numero, hex(numero)[2:]))
+else:
+    print ('Número inválido! Tente novamente.')
+
+#028 - ano de alistamento militar
+from datetime import date
+atual = date.today().year
+
+anoN = int(input('Entre com o ano de mascimento: '))
+
+idade = atual - anoN
+print ('Quem nasce em {} tem {} anos em {}'.format(anoN,idade, atual))
+
+if idade < 18:
+    saldo = 18 - idade
+    print ('{} anos. Ainda faltam {} anos para se alistar no serviço militar.'.format(idade, saldo))
+elif idade == 18:
+    print ('{}  anos. É hora de se alistar no serviço militar.'.format(idade))
+elif idade > 18:
+    saldo = idade - 18
+    print ('{} anos. Passou {} anos do  tempo de se alistar'.format(idade, saldo))
+
+#029 - calcular a media (aprovado, reprovado, recuperacao)
+n1 = float(input('Entre com a nota 1: '))
+n2 = float(input('Entre com a nota 2: '))
+media = (n1 + n2) / 2
+
+if (media < 5):
+    print ('Sua média foi {} Voce foi reprovado!'.format(media))
+elif (media >= 5) & (media < 6.9):
+    print ('Sua média foi {} Voce esta em recuperação'.format(media))
+elif (media > 7 ):
+    print ('Sua média foi {} Parabéns! Você foi aprovado! '.format(media))
+
+#030 - classificacao de atletas
+from datetime import date
+atual = date.today().year
+
+anoN = int(input('Entre com o ano de nascimento do atleta: '))
+idade = atual - anoN
+
+if idade <= 9:
+    print ('Atleta tem {} anos e sua categoia é MIRIM'.format(idade))
+elif idade <= 14:
+    print ('Atleta tem {} anos e sua categoria é INFANTIL'.format(idade))
+elif idade <= 19:
+    print ('Atleta tem {} anos e sua categoria é JÚNIOR'.format(idade))
+elif idade <= 25:
+    print ('Atleta tem {} anos e sua categoria é SENIOR'.format(idade))
+else:
+    print ('Atleta tem {} anos e sua categoria é MASTER'.format(idade))
+
+
+#031 - calcula IMC
+
+peso = float(input('Entre com seu peso em Kg: '))
+altura = float(input('Entre com sua altura em M: '))
+
+imc = peso/(altura * altura)
+print('Seu índice de massa corporal é {:.2f}'.format(imc))
+
+if (imc <= 18.5):
+    print ('Seu IMC foi de {:.2f}. Abaixo do peso! '.format(imc))
+elif (imc >= 18.5) & (imc <= 25):
+    print ('Seu IMC foi de {:.2f}. Peso ideal!'.format(imc))
+elif (imc > 25) & (imc <= 30):
+    print ('Seu IMC foi de {:.2f}. Sobrepeso!'.format(imc))
+elif (imc > 30) & (imc <= 40):
+    print ('Seu IMC foi de {:.2f}. Obesidade!'.format(imc))
+elif (imc > 40):
+    print ('Tu vai morrer miséria! Tais com Obesiade mórmida. Vai se cuidar, filho da puta!')
+
+#032 - calcuando preço do produto e condição de pagamento
+
+preco = float(input('Preço do produto: '))
+print ('''Condição de pagamento'
+       '[ 1 ] A vista em Dinheiro ou Cheque (com 10% de desconto)'
+       '[ 2 ] A vista no cartão (com 5% de desconto)'
+       '[ 3 ] Em até 2x no cartão (valor normal)'
+       '[ 4 ] 3x ou mais no cartão (20% de juros)''')
+opcao = int(input('Entre com a forma de pagamento: '))
+
+if opcao == 1:
+    print ('Voce tem {}% de desconto. Total a pagar será $R {}'.format(10, preco - (preco * 10 / 100)))
+elif opcao == 2:
+    print ('Voce tem {}% de desconto. Total a pagar será $R {}'.format(5, preco - (preco * 5 / 100)))
+elif opcao == 3:
+    print ('Total a pagar será o preço normal ficando 2x de $R {}'.format(preco / 2))
+elif opcao == 4:
+    par = 0
+    par = int(input('Digite a quantidade de parcelas: '))
+if par >= 3:
+    print ('Voce pagará {}% de juros. Serão {} pa
+
+#033 - jogo: JO KEN PO!
+from random import randint
+from time import sleep
+
+itens = ('Pedra', 'Papel', 'Tesoura')
+computador = randint(0, 2)
+jogador = int(input('Qual sua jogada? '))
+print ('JO')
+sleep(1)
+print ('KEN')
+sleep(1)
+print ('PO!!!')
+sleep(1)
+print ('-=' * 11)
+print ('Copmutador jogou {}'.format(itens[computador]))
+print ('Jogador jogou {}'.format(itens[jogador]))
+print ('-=' * 11)
+if computador == 0:
+    if jogador == 0:
+        print ('EMPATE')
+    elif jogador == 1:
+        print ('JOGADOR VENCEU')
+    elif jogador == 2:
+        print ('COPMUTADOR VENCEU')
+    else:
+        print ('JOGADA INVÁLIDA')
+
+if computador == 1:
+    if jogador == 0:
+        print ('COMPUTADOR VENCEU')
+    elif jogador == 1:
+        print ('EMPATE')
+    elif jogador == 2:
+        print ('JOGADOR VENCEU')
+    else:
+        print ('JOGADA INVÁLIDA')
+
+if computador == 2:
+    if jogador == 0:
+        print ('JOGADOR VENCEU')
+    elif jogador == 1:
+        print ('COMPUTADOR VENCEU')
+    elif jogador == 2:
+        print ('EMPATE')
+    else:
+        print ('JOGADA INVÁLIDA')
+
+#34 - contagem regressiva
+from time import sleep
+v = 11
+for i in range(1, 11):
+    sleep(1)
+    t = v - i
+    print (t)
+
+#035 - contagem regressiva
+
+for i in range(1, 51):
+   if i %2==0:
+        print (i)
+
+#036 - calcular somas dos numeros impares multiplos de 3
+
+soma = 0
+cont = 0
+for i in range(1, 500, 2):
+    if i % 3 == 0:
+        cont = cont + 1
+        soma = soma + i
+print ('A soma de todos os {} valores é {}:'.format(cont, soma))
+
+#037 - tabuada
+n = int(input('Entrec com o número: '))
+for i in range(1, 11):
+    soma = n * (i * 1)
+    print ('{} * {} = {}'.format(n, i, soma))
+print ('FIM')
+
+#038 - soma numeros paras inteiros
+soma = 0
+cont = 0
+for i in range(6):
+    n = int(input('Entre com o número: '))
+    if n % 2 == 0:
+        cont = cont + 1
+        soma = soma + n
+print ('{} numeros pares e a soma {}'.format(cont,  soma))
